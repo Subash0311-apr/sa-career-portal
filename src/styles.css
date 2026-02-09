@@ -1,1 +1,141 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* ── Southern Automation Brand Theme ── */
+@theme {
+  --color-sa-blue: #1e3a5f;
+  --color-sa-blue-light: #2c5282;
+  --color-sa-blue-dark: #152a45;
+  --color-sa-orange: #e8702a;
+  --color-sa-orange-light: #ed8936;
+  --color-sa-orange-dark: #c05621;
+  --color-sa-white: #ffffff;
+  --color-sa-gray-50: #f7fafc;
+  --color-sa-gray-100: #edf2f7;
+  --color-sa-gray-200: #e2e8f0;
+  --color-sa-gray-300: #cbd5e0;
+  --color-sa-gray-400: #a0aec0;
+  --color-sa-gray-500: #718096;
+  --color-sa-gray-600: #4a5568;
+  --color-sa-gray-700: #2d3748;
+  --color-sa-gray-800: #1a202c;
+  --color-sa-gray-900: #171923;
+  --color-sa-success: #38a169;
+  --color-sa-warning: #d69e2e;
+  --color-sa-danger: #e53e3e;
+}
+
+/* ── Base Styles ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--color-sa-gray-800);
+  background: var(--color-sa-gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Angular Material Theme Overrides ── */
+:root {
+  --mat-sys-primary: #1e3a5f;
+  --mat-sys-on-primary: #ffffff;
+  --mat-sys-secondary: #e8702a;
+  --mat-sys-on-secondary: #ffffff;
+  --mat-sys-surface: #ffffff;
+  --mat-sys-on-surface: #1a202c;
+  --mat-sys-error: #e53e3e;
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sa-gray-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sa-gray-400);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sa-gray-500);
+}
+
+/* ── Utility Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 112, 42, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(232, 112, 42, 0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out both;
+}
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out both;
+}
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out both;
+}
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out both;
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Skeleton loader */
+.skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #edf2f7 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* Toast container */
+.toast-success {
+  background: var(--color-sa-success) !important;
+  color: white !important;
+}
+.toast-error {
+  background: var(--color-sa-danger) !important;
+  color: white !important;
+}
