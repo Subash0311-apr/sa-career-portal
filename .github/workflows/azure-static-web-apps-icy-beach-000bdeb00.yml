@@ -31,7 +31,10 @@ jobs:
 
       # Build Angular App
       - name: Build App
-        run: npm run build
+        run: |
+          npm run build
+          cp dist/sa-career-page/browser/index.csr.html dist/sa-career-page/browser/index.html
+
 
       # Deploy to Azure
       - name: Deploy
