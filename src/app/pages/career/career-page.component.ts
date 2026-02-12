@@ -29,7 +29,7 @@ import { Job } from '../../core/models';
             🚀 We're Hiring!
           </span>
           <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
-            Join <span class="text-sa-orange">Southern Automation</span>
+            Join <span class="text-sa-orange">Southern</span>
           </h1>
           <p class="text-lg md:text-xl text-sa-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
             Build the future of industrial automation. Explore opportunities in engineering,
