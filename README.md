@@ -2,6 +2,16 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
 
+## Install dependencies
+
+Install project dependencies with:
+
+```bash
+npm install --legacy-peer-deps
+```
+
+This project uses packages that may require the legacy peer dependency resolution used by npm.
+
 ## Development server
 
 To start a local development server, run:
