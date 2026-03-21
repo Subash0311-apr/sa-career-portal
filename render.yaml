@@ -2,7 +2,7 @@ services:
   - type: web
     name: sa-career-page
     runtime: static
-    buildCommand: npm install --legacy-peer-deps && npm run build
+    buildCommand: npm run build
     staticPublishPath: dist/sa-career-page/browser
     envVars:
       - key: NODE_VERSION
