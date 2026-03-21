@@ -8,6 +8,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:render": "ng build --configuration production && node -e \"const fs=require('node:fs');fs.copyFileSync('dist/sa-career-page/browser/index.csr.html','dist/sa-career-page/browser/index.html');\"",
+    "build:ssr": "ng build --configuration production --output-mode=server",
+    "start:ssr": "node dist/sa-career-page/server/server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:sa-career-page": "node dist/sa-career-page/server/server.mjs"

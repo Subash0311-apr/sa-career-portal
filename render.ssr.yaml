@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sa-career-page-ssr
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build:ssr
+    startCommand: npm run start:ssr
+    envVars:
+      - key: NODE_VERSION
+        value: 20
